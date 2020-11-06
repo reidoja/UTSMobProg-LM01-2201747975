@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg2"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_marginTop="12dp"
+        android:textColor="@color/colorAccent"
+        android:id="@+id/title"
+        android:text="@string/app_name"
+        android:layout_centerHorizontal="true"
+        android:textSize="28sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <LinearLayout
+        android:id="@+id/linearBtn"
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginVertical="12dp"
+        android:layout_height="50dp">
+
+        <ImageButton
+            android:id="@+id/myOrderBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onMyorderClick"
+            android:background="@null"
+            android:textAlignment="center"
+            android:scaleType="fitXY"
+            android:src="@drawable/cart"
+            android:adjustViewBounds="true"
+            />
+
+    </LinearLayout>
+
+    <GridLayout
+        android:background="@drawable/background_bg"
+        android:layout_below="@+id/linearBtn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:background="@null"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="12dp"
+            android:adjustViewBounds="true"
+            android:onClick="onDrinkClick"
+            android:scaleType="fitXY"
+            android:src="@drawable/drink" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_row="0"
+            android:background="@null"
+            android:layout_column="1"
+            android:layout_gravity="fill"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="12dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/snacks"
+            android:adjustViewBounds="true"
+            />
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_row="1"
+            android:background="@null"
+            android:layout_column="0"
+            android:layout_gravity="fill"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="12dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/food"
+            android:adjustViewBounds="true"
+            />
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@null"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_gravity="fill"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="12dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/topup"
+            android:adjustViewBounds="true"
+            />
+    </GridLayout>
+
+
+
+</RelativeLayout>

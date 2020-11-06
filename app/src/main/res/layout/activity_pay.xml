@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg2"
+    tools:context=".DrinkActivity">
+
+    <LinearLayout
+        android:id="@+id/linearTop"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/title"
+            android:text="Binus EzyFoody: \nOrder Complete"
+            android:layout_centerHorizontal="true"
+            android:textSize="28sp"
+            android:textColor="@color/colorAccent"
+            android:layout_marginTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <LinearLayout
+            android:id="@+id/linearBtn"
+            android:layout_below="@+id/title"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginVertical="12dp"
+            android:layout_height="50dp">
+            <ImageButton
+                android:id="@+id/menuBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Menu Utama"
+                android:background="@null"
+                android:textAlignment="center"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_baseline_home_24"
+                android:adjustViewBounds="true"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/thanksLbl"
+        android:textSize="28sp"
+        android:textAlignment="center"
+        android:text="Your Order Complete.\nThank You"
+        android:layout_below="@id/linearTop"
+        android:textColor="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:background="@drawable/background_bg"
+        android:padding="24dp"
+        android:layout_below="@+id/thanksLbl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/totalLbl"
+            android:text="Total"
+            android:textSize="28sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/payOrderRv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+</RelativeLayout>
