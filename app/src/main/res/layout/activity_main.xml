@@ -60,7 +60,7 @@
             android:layout_margin="12dp"
             android:adjustViewBounds="true"
             android:onClick="onDrinkClick"
-            android:scaleType="fitXY"
+            android:scaleType="fitCenter"
             android:src="@drawable/drink" />
 
         <ImageButton
@@ -73,7 +73,7 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_margin="12dp"
-            android:scaleType="fitXY"
+            android:scaleType="fitCenter"
             android:src="@drawable/snacks"
             android:adjustViewBounds="true"
             />
@@ -87,7 +87,7 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_margin="12dp"
-            android:scaleType="fitXY"
+            android:scaleType="fitCenter"
             android:src="@drawable/food"
             android:adjustViewBounds="true"
             />
@@ -101,7 +101,7 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_margin="12dp"
-            android:scaleType="fitXY"
+            android:scaleType="fitCenter"
             android:src="@drawable/topup"
             android:adjustViewBounds="true"
             />
