@@ -1,23 +1,31 @@
 package com.example.uts_2201747975;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.uts_2201747975.adapter.PayAdapter;
 import com.example.uts_2201747975.utils.FakeDBHelper;
+import com.example.uts_2201747975.utils.HistoryDBHelper;
+
+import java.time.LocalDate;
 
 public class PayActivity extends AppCompatActivity {
 
     TextView totalLbl;
     ImageButton menuBtn;
     RecyclerView payOrderRv;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,4 +65,5 @@ public class PayActivity extends AppCompatActivity {
         menuBtn = findViewById(R.id.menuBtn);
         payOrderRv = findViewById(R.id.payOrderRv);
     }
+
 }

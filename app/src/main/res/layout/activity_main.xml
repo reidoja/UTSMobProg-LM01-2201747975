@@ -18,6 +18,7 @@
         android:layout_height="wrap_content"/>
 
 
+
     <LinearLayout
         android:id="@+id/linearBtn"
         android:layout_below="@+id/title"
@@ -27,6 +28,18 @@
         android:layout_marginHorizontal="12dp"
         android:layout_marginVertical="12dp"
         android:layout_height="50dp">
+
+        <Button
+            android:id="@+id/historyBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:background="@color/colorPrimaryDark"
+            android:onClick="onHistoryClick"
+            android:padding="8dp"
+            android:text="History"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary" />
 
         <ImageButton
             android:id="@+id/myOrderBtn"
@@ -94,7 +107,7 @@
         android:layout_margin="12dp"
         android:scaleType="fitCenter"
         app:cardCornerRadius="50dp"
-        android:onClick="onDrinkClick"
+        android:onClick="onSnackClick"
         android:adjustViewBounds="true">
         <LinearLayout
             android:layout_gravity="fill"
@@ -128,7 +141,7 @@
             android:layout_margin="12dp"
             android:scaleType="fitCenter"
             app:cardCornerRadius="50dp"
-            android:onClick="onDrinkClick"
+            android:onClick="onFoodClick"
             android:adjustViewBounds="true">
             <LinearLayout
                 android:layout_gravity="fill"
@@ -162,7 +175,7 @@
             android:layout_margin="12dp"
             android:scaleType="fitCenter"
             app:cardCornerRadius="50dp"
-            android:onClick="onDrinkClick"
+            android:onClick="topUpClick"
             android:adjustViewBounds="true">
             <LinearLayout
                 android:layout_gravity="fill"

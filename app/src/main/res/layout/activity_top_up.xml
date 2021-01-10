@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg2"
+    tools:context=".OrderActivity">
+
+    <LinearLayout
+        android:background="@drawable/background_top"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="@color/colorAccent"
+            android:layout_marginTop="12dp"
+            android:id="@+id/title"
+            android:text="Binus EzyFoody: Top Up"
+            android:layout_centerHorizontal="true"
+            android:textSize="28sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_marginVertical="24dp"
+            android:id="@+id/linearBtn"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginHorizontal="12dp"
+            android:layout_height="50dp">
+
+            <ImageButton
+                android:id="@+id/myOrderBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="myOrderClick"
+                android:background="@null"
+                android:textAlignment="center"
+                android:scaleType="fitXY"
+                android:src="@drawable/cart"
+                android:adjustViewBounds="true"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/balanceLbl"
+        android:text="Balance"
+        android:layout_centerVertical="true"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:layout_marginVertical="20dp"
+        android:layout_below="@+id/balanceLbl"
+        android:id="@+id/priceLbl"
+        android:text="Amount"
+        android:textSize="20sp"
+        android:layout_marginHorizontal="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/balanceValue"
+        android:layout_toRightOf="@+id/balanceLbl"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rp. 50000"
+        android:layout_marginLeft="32dp"
+        android:textSize="20sp" />
+    <EditText
+        android:layout_below="@id/balanceValue"
+        android:layout_toRightOf="@id/balanceLbl"
+        android:id="@+id/amountTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="32dp"
+        android:gravity="end"
+        android:inputType="number" />
+
+    <LinearLayout
+        android:id="@+id/linearOrderMore"
+        android:layout_below="@id/priceLbl"
+        android:layout_width="match_parent"
+        android:gravity="bottom|end"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginBottom="24dp"
+        android:layout_height="match_parent">
+
+        <Button
+        android:id="@+id/topUpBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:background="@color/colorPrimaryDark"
+        android:onClick="topUpClick"
+        android:padding="8dp"
+        android:text="Top Up"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

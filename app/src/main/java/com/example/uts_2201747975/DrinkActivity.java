@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import com.example.uts_2201747975.adapter.DrinksAdapter;
 import com.example.uts_2201747975.model.Drink;
@@ -19,6 +20,7 @@ public class DrinkActivity extends AppCompatActivity {
 
     ArrayList<Drink> drinkList;
     RecyclerView drinkRv;
+    TextView title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,9 +28,23 @@ public class DrinkActivity extends AppCompatActivity {
         setContentView(R.layout.activity_drink);
 
         init();
+        String location = getIntent().getStringExtra("location");
+
+        title.setText("Binus Ezyfood " +location);
 
         FakeDBHelper helper = new FakeDBHelper();
-        drinkList = helper.getAll();
+
+        if(FakeDBHelper.choose == 0){
+            drinkList = helper.getAll();
+        }
+        else if(FakeDBHelper.choose == 1){
+            drinkList = helper.getAll1();
+        }
+        else if(FakeDBHelper.choose == 2){
+            drinkList = helper.getAll2();
+        }
+
+
 
         RecyclerView.Adapter adapter = new DrinksAdapter(drinkList, this);
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this, 2);
@@ -44,6 +60,7 @@ public class DrinkActivity extends AppCompatActivity {
     }
 
     private void init() {
+        title = findViewById(R.id.title);
         drinkRv = findViewById(R.id.drinkRv);
     }
 }
